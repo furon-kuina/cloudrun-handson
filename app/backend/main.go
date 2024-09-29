@@ -82,6 +82,7 @@ func dbConnect() *sql.DB {
 		os.Getenv("DB_NAME"),
 		os.Getenv("DB_PORT"),
 	)
+	fmt.Printf("DB info: %s", dsn)
 
 	db, err := sql.Open("postgres", dsn)
 	if err != nil {
